@@ -1,9 +1,10 @@
-from dash import Dash, html, dcc, callback, Output, Input
+from dash import Dash, html, dcc, callback, Output, Input, dash_table
 import random
 import dash_bootstrap_components as dbc
 import numpy as np
+import pandas as pd
 
-app = Dash(external_stylesheets=[dbc.themes.CYBORG])
+app = Dash(external_stylesheets=[dbc.themes.SOLAR])
 
 def load_data():
     mons = np.genfromtxt("mons.txt", delimiter=",", dtype="str", skip_header=1)
@@ -16,6 +17,7 @@ def randomise(mons, battle_items, held_items, team_size=1):
     counter = 0
 
     while counter < team_size:
+        # print(counter)
         selection = []
 
         mon_num = random.randint(0,len(mons)-1)
@@ -35,7 +37,7 @@ def randomise(mons, battle_items, held_items, team_size=1):
             selection.append(str(temp))
 
             can_crit = ["no/no/no"]
-        elif mon[0] == "scyther/scizor":
+        elif mon[0] == "Scyther/Scizor":
             # print('SCYTHER/SCIZOR')
             moveset_flip1 = random.randint(0,1)
             moveset_flip2 = random.randint(0,1)
@@ -113,26 +115,72 @@ def randomise(mons, battle_items, held_items, team_size=1):
         # print(mons[:,0])
         counter += 1
 
-    lanes = np.random.permutation(["jungler","top","top","bot","bot"])
+    lanes = np.random.permutation(["Jungler","Top","Top","Bot","Bot"])
     if team_size == 5:
         for i in range(len(res)):
             res[i].append(str(lanes[i]))
 
     return(res)
 
-mons, battle_items, held_items = load_data()
-team = randomise(mons, battle_items, held_items, 5)
-for i in range(len(team)):
-    print(team[i])
-
 app.layout = [
-    html.H1('Pokemon Unite Randomiser', style={'textAlign': 'center'}),
-    html.H6(team[0]),
-    html.H6(team[1]),
-    html.H6(team[2]),
-    html.H6(team[3]),
-    html.H6(team[4]),
+    html.H1(
+        'Pokemon Unite Randomiser', style={'textAlign': 'center'}
+        ),
+    html.Div([
+    dcc.Slider(1, 5, 1, value=5, id='slider', 
+        marks=None,
+        # title='Number of Pokemon to randomise',
+        tooltip={
+        "always_visible": True,
+        "style": {"color": "LightSteelBlue", "fontSize": "20px"},
+    }),
+    html.Button('RANDOMISE', id='button', n_clicks=0),
+    ], style={"width": '25%', 'display': 'inline-block', 'margin-left': '20px'}
+    ),
+    dash_table.DataTable(
+        id='random_table',
+        # df.to_dict('records'),
+        # [{'name': i, 'id': i} for i in df.columns],
+        style_cell={'textAlign': 'center'},
+        style_header={
+            'backgroundColor': 'rgb(150, 150, 150)',
+            'color': 'black',
+            'fontWeight': 'bold'
+        },
+        style_data_conditional=
+        [{
+        'if': {'row_index': 'odd'},
+        'backgroundColor': 'rgb(220, 220, 220)',
+        'color': 'black'
+        },
+        {
+        'if': {'row_index': 'even'},
+        # 'backgroundColor': 'rgb(220, 220, 220)',
+        'color': 'black'
+        }]
+        )
 ]
+
+@callback(
+    Output('random_table', 'data'),
+    Output('random_table', 'columns'),
+    Input('slider', 'value'),
+    Input('button', 'n_clicks'),
+    prevent_initial_call=True
+)
+def generate_table(nmons, n_clicks):
+# def generate_table(n_clicks):
+    if n_clicks > 0:
+        mons, battle_items, held_items = load_data()
+        team = randomise(mons, battle_items, held_items, nmons)
+        if nmons == 5:
+            df = pd.DataFrame(team, columns=['Pokemon', 'Move 1', 'Move 2', 'Held Item 1', 'Held Item 2', 'Held Item 3', 'Battle Item', 'Lane'])
+        else:
+            df = pd.DataFrame(team, columns=['Pokemon', 'Move 1', 'Move 2', 'Held Item 1', 'Held Item 2', 'Held Item 3', 'Battle Item'])
+        
+        return(df.to_dict('records'), [{'name': i, 'id': i} for i in df.columns])
+    else:
+        return([], [])
 
 if __name__ == '__main__':
     app.run(debug=True)

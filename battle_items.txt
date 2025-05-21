@@ -1,9 +1,9 @@
 name
-eject_button
-fluffy_tail
-full_heal
-goal_getter
-potion
-slow_smoke
-x_attack
-x_speed
+Eject Button
+Fluffy Tail
+Full Heal
+Goal Getter
+Potion
+Slow Smoke
+X-Attack
+X-Speed
