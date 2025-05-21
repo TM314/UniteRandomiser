@@ -7,9 +7,9 @@ import pandas as pd
 app = Dash(external_stylesheets=[dbc.themes.SOLAR])
 
 def load_data():
-    mons = np.genfromtxt("mons.txt", delimiter=",", dtype="str", skip_header=1)
-    battle_items = np.genfromtxt("battle_items.txt", delimiter=",", dtype="str", skip_header=1)
-    held_items = np.genfromtxt("held_items.txt", delimiter=",", dtype="str", skip_header=1)
+    mons = np.genfromtxt("assets/mons.txt", delimiter=",", dtype="str", skip_header=1)
+    battle_items = np.genfromtxt("assets/battle_items.txt", delimiter=",", dtype="str", skip_header=1)
+    held_items = np.genfromtxt("assets/held_items.txt", delimiter=",", dtype="str", skip_header=1)
     return(mons, battle_items, held_items)
 
 def randomise(mons, battle_items, held_items, team_size=1):
