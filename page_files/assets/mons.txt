@@ -1,0 +1,43 @@
+name,physical/special,moveset1,crit1,moveset2,crit2,base crit
+Absol,physical,Night Slash/Pursuit,yes/yes,Psycho Cut/Sucker Punch,yes/yes,yes
+Aegislash,physical,Sacred Sword/Shadow Claw,no/yes,Wide Guard/Iron Head,no/yes,yes
+Azumarill,physical,Play Rough/Water Pulse,yes/yes,Whirpool/Aqua Tail,yes/yes,yes
+Blastoise,special,Hydro Pump/Water Spout,no/no,Surf/Rapid Spin,yes/yes,no
+Blissey,special,Egg Bomb/Helping Hand,no/no,Soft Boiled/Safeguard,no/no,no
+Buzzwole,physical,Lunge/Smack Down,no/no,Leech Life/Superpower,no/no,yes
+Charizard,physical,Flamethrower/Fire Punch,no/no,Fire Blast/Flare Blitz,no/no,yes
+Cinderace,physical,Pyro Ball/Blaze Kick,no/yes,Flame Charge/Feint,no/no,yes
+Cramorant,special,Surf/Dive,no/no,Hurricane/Air Slash,no/no,no
+Crustle,physical,Rock Tomb/Shell Smash,no/no,Stealth Rock/X-Scissor,no/yes,no
+Decidueye,physical,Razor Leaf/Sprit Shackle,yes/no,Leaf Storm/Shadow Sneak,no/no,yes
+Delphox,special,Fire Blast/Mystical Fire,no/no,Fire Spin/Flame Charge,no/no,no
+Dodrio,physical,Tri Attack/Drill Peck,yes/yes,Agility/Jump Kick,no/no,yes
+Dragonite,physical,Dragon Dance/Extreme Speed,no/no,Hyper Beam/Outrage,no/no,yes
+Duraludon,physical,Flash Cannon/Dragon Pulse,yes/no,Dragon Tail/Stealth Rock,no/no,yes
+Eldegoss,special,Pollen Puff/Leaf Tornado,no/no,Cotton Guard/Cotton Spore,no/no,no
+Espeon,special,Psyshock/Stored Power,no/no,Psybeam/Future Sight,no/no,no
+Garchomp,physical,Dig/Dragon Rush,no/no,Earthquake/Dragon Claw,no/no,yes
+Gardevoir,special,Psychic/Moonblast,no/no,Psyshock/Future Sight,no/no,no
+Gengar,special,Shadow Ball/Sludge Bomb,no/no,Dream Eater/Hex,no/no,no
+Glaceon,special,Icicle Spear/Icy Wind,no/yes,Ice Shard/Freeze Dry,yes/no,yes
+Greedent,physical,Bullet Seed/Belch,no/no,Stuff Cheeks/Covet,no/no,no
+Greninja,physical,Water Shuriken/Surf,no/no,Double Team/Smokescreen,no/no,yes
+Hoopa,special,Phantom Force/Shadow Ball,no/no,Hyperspace Hole/Trick,no/no,no
+Lucario,physical,Extreme Speed/Power-Up Punch,no/no,Bone Rush/Close Combat,no/no,yes
+Machamp,physical,Close Combat/Cross Chop,no/yes,Dynamic Punch/Submission,no/no,yes
+Mamoswine,physical,Icicle Crash/Ice Fang,no/no,High Horsepower/Earthquake,no/no,no
+Mr. Mime,special,Confusion/Psychic,no/no,Barrier/Power Swap,no/no,no
+Ninetales,special,Avalanche/Dazzling Gleam,no/no,Blizzard/Aurora Veil,no/no,no
+Pikachu,special,Electro Ball/Bhunder,no/no,Volt Tackle/Thunderbolt,no/no,no
+Slowbro,special,Scald/Surf,no/no,Amnesia/Telekinesis,no/no,no
+Snorlax,physical,Heavy Slam/Flail,no/no,Block/Yawn,no/no,no
+Sylveon,special,Mystical Fire/Hyper Voice,no/no,Draining Kiss/Calm Mind,no/no,no
+Talonflame,physical,Flame Charge/Aerial Ace,no/no,Fly/Brave Bird,no/no,yes
+Trevenant,physical,Wood Hammer/Curse,no/no,Horn Leech/Pain Split,no/no,no
+Tsareena,physical,Triple Axel/Stomp,no/no,Trop Kick/Grassy Glide,no/no,yes
+Tyranitar,physical,Dark Pulse/Stone Edge,no/no,Ancient Power/Sand Tomb,no/no,yes
+VenuSaur,special,Sludge Bomb/Giga Drain,no/no,Solar Beam/Petal Dance,no/no,no
+Wigglytuff,special,Double Slap/Dazzling Gleam,no/no,Rollout/Sing,no/no,no
+Zeraora,physical,Volt Switch/Spark,no/yes,Discharge/Wild Charge,no/no,yes
+Mew,special,Electro Ball/Solar Beam/Surf,no/no/no,Coaching/Light Screen/Agility,no/no/no,no
+Scyther/Scizor,physical,Dual Wingbeat/Bullet Punch,no/no,Double Hit/Swords Dance,no/no,yes
