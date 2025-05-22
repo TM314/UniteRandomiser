@@ -18,6 +18,7 @@ run_app:
 	mkdir pages_files
 	mkdir pages_files/assets
 	mkdir pages_files/_dash-layout
+	mkdir pages_files/_dash-dependencies
 	mv 127.0.0.1:8050 pages_files
 	ls -a pages_files
 	ls -a pages_files/assets
