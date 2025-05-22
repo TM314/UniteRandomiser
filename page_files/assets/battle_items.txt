@@ -1,9 +1,0 @@
-name
-Eject Button
-Fluffy Tail
-Full Heal
-Goal Getter
-Potion
-Slow Smoke
-X-Attack
-X-Speed
